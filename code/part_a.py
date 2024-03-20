@@ -49,7 +49,7 @@ def nearest_neighbor_optimized(depot_lat, depot_lng, orders):
     return route, total_distance, order_ids
 
 # Load input dataset
-input_data = pd.read_csv(r"C:\Users\dell 1\Desktop\Submission\input_datasets\part_a\part_a_input_dataset_5.csv")
+input_data = pd.read_csv(r"input_datasets/part_a/part_a_input_dataset_1.csv")
 
 
 
