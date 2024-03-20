@@ -1,0 +1,31 @@
+Importing Libraries:
+        numpy and pandas are popular libraries for numerical computing and data manipulation, respectively.
+        geopy.distance.geodesic is used to calculate distances between two geographic coordinates on Earth.
+
+Haversine Function:
+        The haversine function calculates the distance between two points on Earth's surface using the Haversine formula.
+        It takes latitude and longitude coordinates of two points as input and returns the distance between them in kilometers.
+
+Nearest Neighbor Algorithm (nearest_neighbor_optimized function):
+        This function implements the Nearest Neighbor algorithm to find an approximate solution to the TSP.
+        It takes the depot's latitude and longitude coordinates and a DataFrame of orders (with columns 'order_id', 'lat', and 'lng') as input.
+        The algorithm starts from the depot and iteratively selects the nearest unvisited order until all orders are visited.
+        It maintains a route list, total distance traveled, and a list of order IDs visited.
+        The algorithm then returns the route, total distance, and order IDs.
+
+Loading Input Data:
+        The script reads the input dataset from a CSV file. The dataset contains depot coordinates and order details (order IDs, latitude, and longitude).
+Extracting Depot Coordinates:
+        The depot's latitude and longitude coordinates are extracted from the input dataset.
+Preparing Orders Data:
+        The depot coordinates are removed from the orders DataFrame, leaving only the order details.
+
+Finding Nearest Neighbor Route:
+        The nearest_neighbor_optimized function is called with the depot coordinates and orders DataFrame as arguments to find the optimized route.
+        This function returns the route (list of coordinates), total distance traveled, and order IDs.
+
+Outputting Route to File:
+        The script prepares the output data by creating a DataFrame with columns for order ID, latitude, longitude, depot coordinates, and delivery sequence number.
+        The route details are written to a CSV file in the specified output directory.
+
+The script efficiently solves the TSP using the Nearest Neighbor algorithm and provides a structured output for further analysis or visualization. It demonstrates practical use of algorithms and data manipulation techniques in solving real-world optimization problems.
